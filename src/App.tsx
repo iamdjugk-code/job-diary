@@ -436,15 +436,11 @@ const [expandedApplicationId, setExpandedApplicationId] =
             const shouldLongBreak =
               nextCount % cyclesBeforeLongBreak === 0;
 
-            const nextBreak = shouldLongBreak
-              ? longBreakMinutes
-              : breakMinutes;
-
-            showNotification(
-              shouldLongBreak
-                ? "집중 시간이 끝났어요! 긴 휴식을 시작합니다."
-                : "집중 시간이 끝났어요! 휴식을 시작합니다."
-            );
+showNotification(
+  shouldLongBreak
+    ? "집중 시간이 끝났어요! 긴 휴식을 시작합니다."
+    : "집중 시간이 끝났어요! 휴식을 시작합니다."
+);
 
             setPomodoroMode(
               shouldLongBreak ? "longBreak" : "break"
